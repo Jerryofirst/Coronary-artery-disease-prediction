@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Coronary Artery Disease Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="web.js"></script>
+        <link rel="stylesheet" href="web.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="label">
+        <h2>Demographic</h2>
+        <h1>Age</h1>
+    <input class="count"  type="number" id="uiAge" class="age-input" name="patientage" placeholder="Enter your age">
+        <h2>Blood Test Result</h2>
+        <h1>Blood Pressure(mmHg)</h1>
+    <input class="count"  type="number" id="uiBP" class="bp-input" name="bloodpressure" value="110">
+        <h1>Triglycerides Level(mg/dL)</h1>
+    <input class="count"  type="number" id="uiTG" class="tg-input" name="triglycerides" value="100">
+</div>
+<form class="form">
+        <h2>Symptoms/Physicals</h2>
+<form class="label">
+        <h1>Typical chest pain</h1>
+        <div class="switch-field">
+        <form>
+            <input type="checkbox" id="chestpain-0" name="uiTypical" value="0"/>
+            <label for="chestpain-0">No</label>
+            <input type="checkbox" id="chestpain-1" name="uiTypical" value="1"/>
+            <label for="chestpain-1">Yes</label> 
+</div>
+<form class="label">
+        <h1>Atypical chest pain</h1>
+        <div class="switch-field">
+        <form>
+            <input type="checkbox" id="atypical-0" name="uiAtypical" value="0"/>
+            <label for="atypical-0">No</label>
+            <input type="checkbox" id="atypical-1" name="uiAtypical" value="1"/>
+            <label for="atypical-1">Yes</label>
+
+</div>
+<form class="label">
+        <h1>Nonanginal chest pain</h1>
+        <div class="switch-field">
+        <form>
+            <input type="checkbox" id="nonanginal-0" name="uiNonanginal" value="0"/>
+            <label for="nonanginal-0">No</label>
+            <input type="checkbox" id="nonanginal-1" name="uiNonanginal" value="1"/>
+            <label for="nonanginal-1">Yes</label>
+</div>
+<form class="form">
+        
+        <h2>Electrocardiogram Finding</h2>
+<form class="label">
+        <h1>T-wave Inversion</h1>
+        <div class="switch-field">
+        <form>
+            <input type="checkbox" id="tinversion-0" name="uiTinversion" value="0"/>
+            <label for="tinversion-0">No</label>
+            <input type="checkbox" id="tinversion-1" name="uiTinversion" value="1"/>
+            <label for="tinversion-1">Yes</label>
+ 
+</div>
+<form class="form">
+                    
+        <h2>Enchocardiography</h2>
+<form class="form">
+        <h1>Regional Wall Motion Abnormality</h1>
+        <div class="switch-field">
+        <form>
+            <input type="radio" id="region_rwma-0" name="uiRegionWMA" value="0"/>
+            <label for="region_rwma-0">Normal</label>
+            <input type="radio" id="region_rwma-1" name="uiRegionWMA" value="1"/>
+            <label for="region_rwma-1">Hypokinesis</label>
+            <input type="radio" id="region_rwma-2" name="uiRegionWMA" value="2"/>
+            <label for="region_rwma-2">Akinesis</label>
+
+        </div>
+        <div class="switch-field">
+            <input type="radio" id="region_rwma-3" name="uiRegionWMA" value="3"/>
+            <label for="region_rwma-3">Dyskinesis</label>
+            <input type="radio" id="region_rwma-4" name="uiRegionWMA" value="4"/>
+            <label for="region_rwma-4">Aneurysmal</label>
+</div>
+<form class="form">
+                    
+        <h2>Underlying Disease</h2>
+<form class="label">
+        <h1>Diabetic</h1>
+        <div class="switch-field">
+        <form>
+            <input type="checkbox" id="dm-0" name="uiDM" value="0"/>
+            <label for="dm-0">No</label>
+            <input type="checkbox" id="dm-1" name="uiDM" value="1"/>
+            <label for="dm-1">Yes</label>
+</div>
+<form class="label">
+        <h1>Hypertensive</h1>
+        <div class="switch-field">
+        <form>
+            <input type="checkbox" id="htn-0" name="uiHTN" value="0"/>
+            <label for="htn-0">No</label>
+            <input type="checkbox" id="htn-1" name="uiHTN" value="1"/>
+            <label for="htn-1">Yes</label> 
+</div> 
+
+          <button class="submit" onclick="onClickedMakeDiagnosis()" type="button">Diagnosis</button>
+          <div id="uiPredictCAD" class="result">  <h2></h2> </div>
+</body>
+</html>
